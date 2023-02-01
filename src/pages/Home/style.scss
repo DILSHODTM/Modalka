@@ -1,0 +1,98 @@
+.home{
+
+    background: url(../../assets/images/bg.webp);
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+}
+.mainss{
+    font-size: 75px;
+    color: #fff;
+    text-align: center;
+
+}
+.cols{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 150px;
+}
+.ps{
+    font-size: 22px;
+    color:#003D80;
+}
+.fss{
+    font-size: 90px;
+}
+.card{
+    width: 180px;
+}
+.Registration{
+    margin-left: 30px;
+    
+   margin-bottom: 50px;
+    
+}
+.opacitys{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.5;
+    top: 0px;
+}
+.modal{
+    background-color: #E7F7FD;
+    position: fixed;
+    width: 00px;
+    height: 500px;
+    top: 110px;
+    left: 400px;
+   display: inline;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    
+}
+.mai{
+    font-size: 55px;
+    color: #003D80;
+}
+.imgs{
+    margin-right: -15px;
+   width: 300px;
+   height: 500px;
+    
+}
+.btn{
+    background: #003D80;
+}
+.quit{
+    position: relative;
+    left: 725px;
+    top: -210px;
+}
+.cars{
+    position: fixed;
+    
+    background-color: #003D80;
+    width: 130px;
+    height: 120px;
+
+}
+.carca{
+    position: fixed;
+    right: 50px;
+    background-color: #003D80;
+    width: 130px;
+  bottom: 50px;
+    
+
+}
+.fars{
+    padding: 15px;
+}
