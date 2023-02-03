@@ -6,33 +6,35 @@ import "./style.scss";
 const index = () => {
 
    const modalKa=useRef();
+   const register=useRef();
+   const show=useRef();
+   const shows=useRef();
+
+   const quit=()=>{
+       modalKa.current.classList.add('d-none')
+       register.current.classList.add('d-none')
+         show.current.classList.remove('d-none')
+         shows.current.classList.remove('d-none')
+     
+      
+   }
 
    const falfal=()=>{
       setTimeout(() => {
-         document.querySelector('.opacitys').classList.remove('d-none');
-         document.querySelector('.modal').classList.remove('d-none');
-         document.querySelector('.cars').classList.add('d-none');
-         document.querySelector('.carca').classList.add('d-none');
-         
+         modalKa.current.classList.remove('d-none')
+         register.current.classList.remove('d-none')
+         show.current.classList.add('d-none')
+         shows.current.classList.add('d-none')
       }, 3000);
    }
 
-const quit=()=>{
-   // modalKa.current.classlist.add('d-none')
-   document.querySelector('.opacitys').classList.add('d-none');
-   document.querySelector('.modal').classList.add('d-none');
-   document.querySelector('.cars').classList.remove('d-none');
-   document.querySelector('.carca').classList.remove('d-none');
-   
-};
-const adds=()=>{
-   // modalKa.current.classlist.add('d-none')
-   document.querySelector('.opacitys').classList.remove('d-none');
-   document.querySelector('.modal').classList.remove('d-none');
-   document.querySelector('.cars').classList.add('d-none');
-   document.querySelector('.carca').classList.add('d-none');
-   
-};
+   const adds=()=>{
+      modalKa.current.classList.remove('d-none')
+      register.current.classList.remove('d-none')
+      show.current.classList.add('d-none')
+      shows.current.classList.add('d-none')
+   }
+
 
 falfal();
 
@@ -73,7 +75,7 @@ falfal();
            
          </div>
 
-          <div  className=" container d-flex  modal d-none  w-50">
+          <div  ref={register} className=" container d-flex  modal d-none  w-50">
             <button   className="btn btn-success quit text-warning" onClick={quit}>x</button>
             <div className="Registration">
                <p className='mai'>Enjoy 10% OFF*
@@ -95,10 +97,10 @@ your first order!</p>
             </div>
             <img className='imgs' src={modals} alt="" />
          </div>
-        <button className="btn btn-primary cars  rounded-pill" onClick={adds}>
+        <button ref={show} className="btn btn-primary cars  rounded-pill" onClick={adds}>
          Enjoy 10% OFF*
         </button>
-        <button className="btn btn-primary carca  rounded-pill" onClick={adds}>
+        <button ref={shows} className="btn btn-primary carca  rounded-pill" onClick={adds}>
         <i class="bi bi-chat me-2"></i>
          Contact us
         </button>
@@ -108,4 +110,4 @@ your first order!</p>
    );
 };
 
-export default index; <h1>Home</h1>
+export default index;
